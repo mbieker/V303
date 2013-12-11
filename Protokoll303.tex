@@ -16,7 +16,8 @@ germandbls={ß},
 		Julian Surmann\\
 		\\
 		Durchgef\"{u}hrt am 05.12.2013\\
-		TU Dortmund}
+		TU
+		 Dortmund}
 \date{}
 \usepackage{graphicx}
 \begin{document}
@@ -32,27 +33,31 @@ germandbls={ß},
 \section{Einleitung}
 Im folgenden Versuch soll der Lock-In-Verstärker kennengelernt werden. Beim Lock-In-Verstärker handelt es sich um eine Schaltung, die ein stark verrauschtes Signal messbar macht.
 \section{Theorie}
-Um sehr schwache elektrische Signale zu messen, hat der Lock-In-Verstärker einen integrierten phasenempfindlichen Detektor. Zur Messung wird ein Signal mit einer beliebigen, aber konstanten Referenzfrequenz $w_0$ moduliert. Dieses Signal durchläuft den Messaufbau und wird dann mit einem geeigneten Empfänger wieder aufgenommen. Das aufgenommene Signal kann jetzt stark verrauscht sein, z.B. durch elektromagnetische Störquellen. Dieses Signal wird zunächst in einen Bandpass gespeist, sodass Störungen mit einer deutlich größeren $(w \gg w_0)$ bzw. kleineren Frequenz $(w \ll w_0)$ entfernt werden. Anschließend wird das Signal mit einem parallel erzeugten Referenzsignal der gleichen Frequenz im Mischer multipliziert. Die Phasenverschiebung zwischen den beiden Signalen ist dabei einstellbar, so können die Signale immer gleichphasig $(\Delta \phi) $eingestellt werden. Das bei der Multiplikation entstehende Signal wird schließlich in einen Tiefpass-Filter geführt. Dieser integriert das Signal über mehrere Perioden, sodass alle Störungen und das Rauschen fast restlos entfernt werden.
+Um sehr schwache elektrische Signale zu messen, hat der Lock-In-Verstärker einen integrierten phasenempfindlichen Detektor. Zur Messung wird ein Signal mit einer beliebigen, aber konstanten Referenzfrequenz $w_0$ moduliert. Dieses Signal durchläuft den Messaufbau und wird dann mit einem geeigneten Empfänger wieder aufgenommen. Das aufgenommene Signal kann jetzt stark verrauscht sein, z.B. durch elektromagnetische Störquellen. Dieses Signal wird zunächst in einen Bandpass gespeist, sodass Störungen mit einer deutlich größeren $(w \gg w_0)$ bzw. kleineren Frequenz $(w \ll w_0)$ entfernt werden. Anschließend wird das Signal mit einem parallel erzeugten Referenzsignal der gleichen Frequenz im Mischer multipliziert. Die Phasenverschiebung zwischen den beiden Signalen ist dabei einstellbar, so können die Signale immer gleichphasig $(\Delta \phi) $eingestellt werden. Das bei der Multiplikation entstehende Signal wird schließlich in einen Tiefpass-Filter geführt. Dieser integriert das Signal über mehrere Perioden, sodass alle Störungen und das Rauschen fast restlos entfernt werden. Am Ausgang des Lock-In-Verstärkers liegt dann eine Spannung $U_{Out}$ an, die proportional ist zu der Spannung des Messsignals $U_{Sig}$. Indem man die Zeit der Integration $\tau = RC$ sehr groß wählt, kann man die Bandbreite des Rauschens $\Delta v = 1 / \pi RC$ beliebig verkleinern.\newline
+Bei der Ausgangsspannung handelt es sich dann um die zur Signalspannung proportionale Spannung
 \begin{equation}
-F O R M E L  
+U_{Out} = \frac{2U_0}{\pi}.
+\end{equation}
+Bei einer Phasendifferenz $\phi \neq 0$ gilt
+\begin{equation}
+U_{Out} = \frac{2U_0}{\pi}cos(\phi).
 \end{equation}
 \section{Aufbau und Durchf\"{u}hrung}
-Hier folgt der Aufbau und die Durchführung.
+Zur Versuchsdurchführung steht ein modular aufgebauter Lock-In-Verstärker, ein digitales Speicheroszilloskop, eine Led und ein Photodetektor zur Verfügung. Es sollen insgesamt drei Messreihen durchgeführt werden.
+Ein schematischer Aufbau ist der Abbildung ??? zu entnehmen.\newline
+BILD\newline
+Der Lock-In-Verstärker besteht aus einem Frequenzgenerator, einem Verstärker, einem Bandpass-Filter, einem Mischer und einem Lowpass-Filter mit integrierter variabler Verstärkung. Zusätzlich stellt das Modul einen Rauschgenerator zur Verfügung, um Störungen einer Messung zu simulieren. Ein digitales Speicheroszilloskop wird verwendet, um die Signale an verschiedenen Stellen des Signalwegs anzuzeigen und graphisch zu speichern. In den ersten beiden Messreihen wird die Schaltung je schrittweise aufgebaut, die Erste ohne und die Zweite mit Rauschgenerator. An dem Ausgang jedes verwendeten Bauteils wird dann das Ausgangssignal mit dem Oszilloskop graphisch aufgenommen.\newline
+Im dritten Versuchsteil soll mit dem Frequenzgenerator eine Led periodisch zum Leuchten gebracht werden (BILD ???). \newline
+\newline
+Das Lichtsignal der Led wird dann mit einem in variabler Entfernung angebrachten Photodetektor erfasst und dann in den Verstärker gespeist. Das Signal ist jetzt durch das Umgebungslicht verrauscht, der eingebaute Rauschgenerator wird also nicht verwendet. Der Phototransistor wird immer weiter von der Led entfernt und die Ausgangsspannung des Lowpass-Filters ermittelt, um eine Aussage darüber zu treffen, bis zu welcher Entfernung das Signal der Led noch nennenswert erfasst wird.
 \section{Auswertung}
-Hier folgt die Auswertung.
-Das ist eine geeignete Tabelle mit 5 Spalten:
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-$\varphi[^\circ]$ & $\varphi [rad]$ & $F [N]$ & $M [N]$ & $ D [\frac{Nm}{rad}]$ \\
-\hline
-20.0 & 0.349 & 0.1 & 0.01 & 0.0286\\
-40.0 & 0.698 & 0.2 & 0.02 & 0.0286\\
-\hline
-\end{tabular}
-\caption{Benennung der Tabelle}
-\end{table}
+\subsection{Aufbau und Auswertung der Schaltungen 1.A und 1.B}
+\subsubsection{Funktionengenerator}
+\subsubsection{Rauschgenerator (Nur 1.B)}
+\subsubsection{Verstärker}
+\subsubsection{Bandpass-Filter}
+\subsubsection{Mischer}
+\subsubsection{Lowpass-Filter}
 \section{Diskussion}
 Hier kommt die Diskussion hin.
 \section{Literatur- und Abbildungsverzeichnis}
