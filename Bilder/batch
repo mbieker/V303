@@ -1,0 +1,7 @@
+for i in ./*; do echo "begin{figure}[htp]";
+echo "\centering";
+echo "\includegraphics[scale=1]{$i}";
+echo "\caption{Signal vom Sinusgenerator}";
+echo "\label{Abb1}";
+echo "\end{figure}";
+done;
