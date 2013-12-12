@@ -56,7 +56,7 @@ def make_LaTeX_table(data,header, flip= 'false', onedim = 'false'):
         else:
             return 'ERROR'
 
-
+close()
 data = loadtxt('Messwerte/aufg2', unpack='True')
 table_content = [[data[0][i], data[1][i], data[1][i]/2] for i in range(12)]
 data[0] = data[0]*pi/180
@@ -68,18 +68,19 @@ print(make_LaTeX_table(array(table_content), [r'$\Delta \phi [^\cric]$','U_{out}
 def cos_fit(phi,A):
     return A*cos(phi)/pi
 params , cov = curve_fit(cos_fit,data[0],data[1])
-plot(data[0],data[1],'x')
+plot(data[0],data[1],'x', label = "Messwerte")
+plot(phi, cos_fit(phi, params[0]), label ="Fit")
 xlabel("Phasenverschiebung [rad]")
 ylabel(r"$U_{out} [V]$")
 grid(True)
 phi = linspace(0,2*pi)
-A = ufloat(params[0],cov[0][0])
+
+legend()
 
 
 
 
-plot(phi, cos_fit(phi, params[0]))
-show()
+savefig('Diagramme/diag1.png')
 close()
 
 #Verlauf bei verrasuchtem Signal
@@ -91,11 +92,15 @@ print(make_LaTeX_table(array(table_content), [r'$\Delta \phi [^\circ]$','$U_{out
 params , cov = curve_fit(cos_fit,phase_shift,output)
 phi = linspace(0,2*pi)
 A = ufloat(params[0],cov[0][0])
-plot(phi, cos_fit(phi, params[0]))
+plot(phi, cos_fit(phi, params[0]), label="Fit")
+plot(phase_shift,output, 'x',label="Messwerte")
+xlabel("Phasenverschiebung [rad]")
+ylabel(r"$U_{out} [V]$")
+grid(True)
 
+legend()
+savefig('Diagramme/diag2.png')
 
-plot(phase_shift,output, 'x')
-show()
 close()
 
 
@@ -111,12 +116,11 @@ print(make_LaTeX_table(array(table_content), [r'd^* [m]','d [m]','$U_{out}^*$', 
 def fit(x,a,b):
     return a*x+b
 
-
-
-regression_distance = linspace(0.024,1.4)
-
-
 plot(distance,output,'x')
+xlabel('Abstand $[m]$')
+ylabel(r'$U_0 [V]$')
+xscale('log')
 yscale('log')
-xscale("log")
-show()
+grid(True)
+savefig('Diagramme/diag3.png')
+close()

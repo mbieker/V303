@@ -58,6 +58,22 @@ Das Lichtsignal der Led wird dann mit einem in variabler Entfernung angebrachten
 \subsubsection{Bandpass-Filter}
 \subsubsection{Mischer}
 \subsubsection{Lowpass-Filter}
+
+\subsection{Photodetektorschaltung}
+Im letzten Veruschsteil wurde die ausgangsspannung in Abhängigkeit von dem Abstand zwischen der LED und der Photodiode bestimmt werden. Die gemessenen Werte sind  in Tabelle 3 zu finden. Da während der Messung der Verstärkunsfaktor (Gain) mehrfach geändert wurde, werden die gemessenen Werte $U_{out}^*$ wie folgt skaliert:
+\begin{equation}
+U_{Out} = \frac{U_{out}^*}{Gain}.
+\end{equation} 
+Des Weiteren wurde bei der Abstandsmessung nicht der Abstand $d$ zwischen LED und Detektor gemessen, $d^*$ entspricht dem Abstand zwischen den Gehäusen der Bauteile. Die Differenz dieser Größen wurde ermittelt und beträgt $2.4 \,cm$, daher gilt 
+\begin{equation}
+d = d^* - 0.024\,m .
+\end{equation}
+In  Abbildung \ref{logplot} ist $U_{out}$ gegen $d$ aufgetragen. Durch die gewählte lograrithmische Skalierung beider Achsen ist erkennbar, dass $U_{out}$ proportional zum Abstandsquadrat ist.
+
+\noindent
+Das Signal der LED konnte trotz der geringen Ausgangsspannung dennoch auf der gesamten Messstrecke nachgewiesen werden. 
+
+
 \section{Diskussion}
 Hier kommt die Diskussion hin.
 \section{Literatur- und Abbildungsverzeichnis}
@@ -105,19 +121,19 @@ $\Delta \phi [^\circ]$ & $U_{out}^* [V]$ & Gain & $U_{out} [V]$ \\
 \hline
 $\Delta \phi [^\circ]$ & $U_{out}^* [V]$ & Gain & $U_{out} [V]$ \\
 \hline
-0.0 & 5.0 & 10.0 & 0.5\\
-30.0 & 4.5 & 10.0 & 0.45\\
-60.0 & 2.1 & 10.0 & 0.21\\
-90.0 & 0.5 & 10.0 & 0.05\\
-120.0 & -1.7 & 10.0 & -0.17\\
-150.0 & -3.8 & 10.0 & -0.38\\
-180.0 & -4.2 & 10.0 & -0.42\\
-210.0 & -3.8 & 10.0 & -0.38\\
-240.0 & -1.4 & 10.0 & -0.14\\
-270.0 & 0.4 & 10.0 & 0.04\\
-300.0 & 2.3 & 10.0 & 0.23\\
-330.0 & 4.6 & 10.0 & 0.46\\
-360.0 & 5.0 & 10.0 & 0.5\\
+0.0 & 5.0 & 10 & 0.5\\
+30.0 & 4.5 & 10 & 0.45\\
+60.0 & 2.1 & 10 & 0.21\\
+90.0 & 0.5 & 10 & 0.05\\
+120.0 & -1.7 & 10 & -0.17\\
+150.0 & -3.8 & 10 & -0.38\\
+180.0 & -4.2 & 10 & -0.42\\
+210.0 & -3.8 & 10 & -0.38\\
+240.0 & -1.4 & 10 & -0.14\\
+270.0 & 0.4 & 10 & 0.04\\
+300.0 & 2.3 & 10 & 0.23\\
+330.0 & 4.6 & 10 & 0.46\\
+360.0 & 5.0 & 10 & 0.5\\
 \hline
 \end{tabular}
 \label{data2}
@@ -131,20 +147,20 @@ $\Delta \phi [^\circ]$ & $U_{out}^* [V]$ & Gain & $U_{out} [V]$ \\
 \hline
 $d^* [m]$ & $d [m]$ & $U_{out}^*$ & Gain & $U_{out}$ \\
 \hline
-0.06 & 0.024 & 6.6 & 2.0 & 3.3\\
-0.16 & 0.124 & 4.7 & 20.0 & 0.235\\
-0.26 & 0.224 & 8.3 & 100.0 & 0.083\\
-0.36 & 0.324 & 4.5 & 100.0 & 0.045\\
-0.46 & 0.424 & 6.5 & 200.0 & 0.0325\\
-0.56 & 0.524 & 5.1 & 200.0 & 0.0255\\
-0.66 & 0.624 & 4.0 & 200.0 & 0.020\\
-0.76 & 0.724 & 8.6 & 500.0 & 0.0172\\
-0.86 & 0.824 & 7.9 & 500.0 & 0.0158\\
-0.96 & 0.924 & 7.4 & 500.0 & 0.0148\\
-1.06 & 1.024 & 6.9 & 500.0 & 0.0138\\
-1.16 & 1.124 & 6.6 & 500.0 & 0.0132\\
-1.26 & 1.224 & 6.5 & 500.0 & 0.0130\\
-1.36 & 1.324 & 6.1 & 500.0 & 0.0122\\
+0.06 & 0.024 & 6.6 & 2 & 3.3\\
+0.16 & 0.124 & 4.7 & 20 & 0.235\\
+0.26 & 0.224 & 8.3 & 100 & 0.083\\
+0.36 & 0.324 & 4.5 & 100 & 0.045\\
+0.46 & 0.424 & 6.5 & 200 & 0.0325\\
+0.56 & 0.524 & 5.1 & 200 & 0.0255\\
+0.66 & 0.624 & 4.0 & 200 & 0.020\\
+0.76 & 0.724 & 8.6 & 500 & 0.0172\\
+0.86 & 0.824 & 7.9 & 500 & 0.0158\\
+0.96 & 0.924 & 7.4 & 500 & 0.0148\\
+1.06 & 1.024 & 6.9 & 500 & 0.0138\\
+1.16 & 1.124 & 6.6 & 500 & 0.0132\\
+1.26 & 1.224 & 6.5 & 500 & 0.0130\\
+1.36 & 1.324 & 6.1 & 500 & 0.0122\\
 \hline
 \end{tabular}
 \label{data}
@@ -246,6 +262,12 @@ $d^* [m]$ & $d [m]$ & $U_{out}^*$ & Gain & $U_{out}$ \\
 \label{Abb14}
 \end{figure}
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.50]{Diagramme/diag3.png}
+\caption{$U_{out}$ in Abhängikeit von $d$}
+\label{logplot}
+\end{figure}
 
 
 \end{document}
