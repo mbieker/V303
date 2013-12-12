@@ -44,29 +44,37 @@ U_{Out} = \frac{2U_0}{\pi}cos(\phi).
 \end{equation}
 \section{Aufbau und Durchf\"{u}hrung}
 Zur Versuchsdurchführung steht ein modular aufgebauter Lock-In-Verstärker, ein digitales Speicheroszilloskop, eine Led und ein Photodetektor zur Verfügung. Es sollen insgesamt drei Messreihen durchgeführt werden.
-Ein schematischer Aufbau ist der Abbildung ??? zu entnehmen.\newline
-BILD\newline
+Ein schematischer Aufbau ist der Abbildung \ref{Abbi2} zu entnehmen.\begin{figure}[h]
+\centering
+\includegraphics[scale=0.70]{Bilder/Abbildung2.png}
+\caption{Schaltung 1.B - Messaufbau mit Rauschgenerator}
+\label{Abbi2}
+\end{figure}
 Der Lock-In-Verstärker besteht aus einem Frequenzgenerator, einem Verstärker, einem Bandpass-Filter, einem Mischer und einem Lowpass-Filter mit integrierter variabler Verstärkung. Zusätzlich stellt das Modul einen Rauschgenerator zur Verfügung, um Störungen einer Messung zu simulieren. Ein digitales Speicheroszilloskop wird verwendet, um die Signale an verschiedenen Stellen des Signalwegs anzuzeigen und graphisch zu speichern. In den ersten beiden Messreihen wird die Schaltung je schrittweise aufgebaut, die Erste ohne und die Zweite mit Rauschgenerator. An dem Ausgang jedes verwendeten Bauteils wird dann das Ausgangssignal mit dem Oszilloskop graphisch aufgenommen.\newline
-Im dritten Versuchsteil soll mit dem Frequenzgenerator eine Led periodisch zum Leuchten gebracht werden (BILD ???). \newline
-\newline
+Im dritten Versuchsteil soll mit dem Frequenzgenerator eine Led periodisch zum Leuchten gebracht werden (Abbildung \ref{Abbi3}). \begin{figure}[h]
+\centering
+\includegraphics[scale=0.70]{Bilder/abbildung3.png}
+\caption{Schaltung 2 - Photodetektorschaltung}
+\label{Abbi3}
+\end{figure}
 Das Lichtsignal der Led wird dann mit einem in variabler Entfernung angebrachten Photodetektor erfasst und dann in den Verstärker gespeist. Das Signal ist jetzt durch das Umgebungslicht verrauscht, der eingebaute Rauschgenerator wird also nicht verwendet. Der Phototransistor wird immer weiter von der Led entfernt und die Ausgangsspannung des Lowpass-Filters ermittelt, um eine Aussage darüber zu treffen, bis zu welcher Entfernung das Signal der Led noch nennenswert erfasst wird.
 \section{Auswertung}
 \subsection{Aufbau und Auswertung der Schaltungen 1.A und 1.B}
 \subsubsection{Funktionengenerator}
-Der Funktionengenerator erzeugt zwei Signale, die an separaten Ausgängen anliegen. Am linken Ausgang liegt das Messsignal an, bei dem es sich um eine Rechteck- oder Sinusspannung handelt. Der rechte Ausgang ist für das Referenzsignal bestimmt. Die Amplitude des rechten Ausgangs liegt konstant bei ??? V. Am linken Ausgang liegt eine eingestellte Spannung von $10 \, mV$ bei einer Frequenz von $1000 \, Hz$ an. Das mit dem Oszilloskop gemessene Signal ist in Abbildung ??? zu sehen.
+Der Funktionengenerator erzeugt zwei Signale, die an separaten Ausgängen anliegen. Am linken Ausgang liegt das Messsignal an, bei dem es sich um eine Rechteck- oder Sinusspannung handelt. Der rechte Ausgang ist für das Referenzsignal bestimmt. Die Amplitude des rechten Ausgangs liegt konstant bei 2.33 V. Am linken Ausgang liegt eine eingestellte Spannung von $10 \, mV$ bei einer Frequenz von $1000 \, Hz$ an. Das mit dem Oszilloskop gemessene Signal ist in Abbildung \ref{Abb1} zu sehen.
 \subsubsection{Rauschgenerator (Nur 1.B)}
-Der Rauschgenerator wird nur in Schaltung 1.B eingesetzt. Er addiert ein Rauschen auf das Signal. Dies ist in Abbildung ??? zu sehen. 
+Der Rauschgenerator wird nur in Schaltung 1.B eingesetzt. Er addiert ein Rauschen auf das Signal. Dies ist in Abbildung \ref{Abb2} zu sehen. 
 \subsubsection{Vorverstärker}
-Der Vorverstärker verstärkt das Signal (Abbildungen ??? und ???). Bei beiden Signalen ist zu sehen, dass sich lediglich die Amplitude der Signale ändert.
+Der Vorverstärker verstärkt das Signal (Abbildungen \ref{Abb3} und \ref{Abb4}). Bei beiden Signalen ist zu sehen, dass sich lediglich die Amplitude der Signale ändert.
 \subsubsection{Bandpass-Filter}
-Der Bandpass-Filter wird auf die Frequenz des Funktionengenerators eingestellt. Damit werden grob die Anteile des Rauschens entfernt, deren Frequenz deutlich von der des Messsignals abweicht (Abbildungen ??? und ???). An dem unverrauschten Signal ändert sich nichts, bei dem Verrauschten Signal wird ein Teil des Rauschens bereits entfernt.
+Der Bandpass-Filter wird auf die Frequenz des Funktionengenerators eingestellt. Damit werden grob die Anteile des Rauschens entfernt, deren Frequenz deutlich von der des Messsignals abweicht (Abbildungen \ref{Abb5} und \ref{Abb6}). An dem unverrauschten Signal ändert sich nichts, bei dem Verrauschten Signal wird ein Großteil Teil des Rauschens bereits entfernt, der Graph erscheint lediglich "dicker".
 \subsubsection{Mischer}
-Der Mischer addiert das Messsignal und das Referenzsignal miteinander (Abbildungen ??? und ???). Durch diese Mischung wird eine Gleichrichtung erzeugt, diese ist deutlich zu erkennen.
+Der Mischer multipliziert das Messsignal und das Referenzsignal miteinander.  Die Abbildungen \ref{Abb7} bis \ref{Abb10} zeigen die multiplizierten Signale bei verschiedenen Phasenverschiebungen bei unverrauschtem Signal. Man erkennt Symmetrien, so scheinen die Signale bei einem Unterschied der Phasenverschiebung von 180 $^\circ$ gespiegelt zu sein. Der Mischer erzeugt eine außerdem Gleichrichtung des Signals. Die Abbildungen \ref{Abb11} bis \ref{Abb14} zeigen die multiplizierten Signale mit Rauschen. Das Rauschen scheint schon fast komplett entfernt, die Graphen unterscheiden sich nur sehr leicht von denen ohne Rauschen.
 \subsubsection{Lowpass-Filter}
-Der Lowpass-Filter mit dem Integrierglied integriert das Signal über mehrere Perioden des Signals. Dadurch werden die meisten Rauschsignale entfernt. Die mittlere Ausgangsspannung wird für verschiedene Phasenverschiebungen mit Hilfe eines Voltmeters gemessen. Die Messwerte sind den Tabellen ??? und ??? zu entnehmen.
+Der Lowpass-Filter mit dem Integrierglied integriert das Signal über mehrere Perioden des Signals. Dadurch werden die Rauschsignale entfernt. Die mittlere Ausgangsspannung wird für verschiedene Phasenverschiebungen mit Hilfe eines Voltmeters gemessen. Die Messwerte sind den Tabellen 1 und 2 zu entnehmen.
 
 \subsection{Photodetektorschaltung}
-Im letzten Veruschsteil wurde die ausgangsspannung in Abhängigkeit von dem Abstand zwischen der LED und der Photodiode bestimmt werden. Die gemessenen Werte sind  in Tabelle 3 zu finden. Da während der Messung der Verstärkunsfaktor (Gain) mehrfach geändert wurde, werden die gemessenen Werte $U_{out}^*$ wie folgt skaliert:
+Im letzten Versuchsteil wurde die Ausgangsspannung in Abhängigkeit von dem Abstand zwischen der LED und der Photodiode bestimmt. Die gemessenen Werte sind  in Tabelle 3 zu finden. Da während der Messung der Verstärkungsfaktor (Gain) mehrfach geändert wurde, werden die gemessenen Werte $U_{out}^*$ wie folgt skaliert:
 \begin{equation}
 U_{Out} = \frac{U_{out}^*}{Gain}.
 \end{equation} 
@@ -74,7 +82,7 @@ Des Weiteren wurde bei der Abstandsmessung nicht der Abstand $d$ zwischen LED un
 \begin{equation}
 d = d^* - 0.024\,m .
 \end{equation}
-In  Abbildung \ref{logplot} ist $U_{out}$ gegen $d$ aufgetragen. Durch die gewählte lograrithmische Skalierung beider Achsen ist erkennbar, dass $U_{out}$ proportional zum Abstandsquadrat ist.
+In  Abbildung \ref{logplot} ist $U_{out}$ gegen $d$ aufgetragen. Durch die gewählte logarithmische Skalierung beider Achsen ist erkennbar, dass $U_{out}$ proportional zum Abstandsquadrat ist.
 
 \noindent
 Das Signal der LED konnte trotz der geringen Ausgangsspannung dennoch auf der gesamten Messstrecke nachgewiesen werden. 
@@ -90,8 +98,10 @@ Hier befindet sich das Literatur- und Abbildungsverzeichnis.
 \begin{itemize}
 \item Tabelle 1: $U_{out}$ in Abhängigkeit von $\Delta\phi$ (unverrauschtes Signal)
 \item Tabelle 2: $U_{out}$ in Abhängigkeit von $\Delta\phi$ (verrauschtes Signal)
+\item Abbildungen \ref{Abbi2} und \ref{Abbi3}: Entnommen der Praktikumsableitung zu V303 der TU Dortmund, aufgerufen am 10.12.2013 unter \newline "http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/LockIn.pdf"
 \item Tabelle 3: Messergebnisse der Photodetektorschaltung
 \item Abbildungen \ref{Abb1} bis \ref{Abb14}: Mit dem Oszilloskop erstellte Screenshots
+\item Abbildung 15: Eigene Erstellung mit python matplotlib
  
 \end{itemize}
 \newpage
