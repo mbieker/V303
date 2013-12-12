@@ -7,6 +7,7 @@
 \usepackage{inputenc}
 \usepackage{graphicx}
 \usepackage{selinput}
+\usepackage{morefloats}
 \SelectInputMappings{%
 adieresis={ä},
 germandbls={ß},
@@ -63,13 +64,20 @@ Der Bandpass-Filter wird auf die Frequenz des Funktionengenerators eingestellt. 
 \subsubsection{Mischer}
 Der Mischer addiert das Messsignal und das Referenzsignal miteinander (Abbildungen ??? und ???). Durch diese Mischung wird eine Gleichrichtung erzeugt, diese ist deutlich zu erkennen.
 \subsubsection{Lowpass-Filter}
-Der Lowpass-Filter mit dem Integrierglied integriert das Signal über mehrere Perioden des Signals. Dadurch werden die meisten Rauschsignale entfernt. Die mittlere Ausgangsspannung wird für verschiedene Phasenverschiebungen mit Hilfe eines Voltmeters gemessen. Die Messwerte sind den Tabellen ??? und ??? zu entnehmen.
+Der Lowpass-Filter mit dem Integrierglied integriert das Signal über mehrere Perioden des Signals. Dadurch werden die meisten Rauschsignale entfernt. Die durch die am Ausgang des Integgrators anliegende Spannung $U_{out}^*$ wurde f\"ur verschiedene Phasenverschiebungen gemessen. F\"ur das unverruaschte Signal finden sich die Werte in Tabelle 1 und f\"ur das verrauschte Signal in Tabelle 2. Da das Integrierglied die Signale auch verst\"arkt und bei den jeweiligen Messreihen ein unterschiedlicher Verst\"arkungsfaktor (Gain) verwendet wurde, sind die Ergebnisse nicht direkt vergleichbar. F"ur die unverst\"arkte Spannung $U_{out}$ gilt:
+\begin{equation}
+U_{out} = \frac{U_{out}^*}{Gain}
+\end{equation}
+Die so bestimmmten Werte f\"ur $U_{out}$ werden gegen die Phasenverschiebung $\Delta \phi$ aufgetragen. Abbildung \ref{sinediag} zeigt den Zusammenhang f\"ur das unverrauschte Signal und Abbildung \ref{noisediag}. Eine nicht lineare Ausgleichrechnung mit dem Ansatz aus Formel 2 ergibt f\"ur die Eingangspannung $U_0$ folgende Werte:
+\begin{itemize}
+\item unverrauschtes Signal: $U_0=$
+\item verrauschtes Signal: $U_0=$
+\end{itemize} 
+
+
 
 \subsection{Photodetektorschaltung}
-Im letzten Veruschsteil wurde die ausgangsspannung in Abhängigkeit von dem Abstand zwischen der LED und der Photodiode bestimmt werden. Die gemessenen Werte sind  in Tabelle 3 zu finden. Da während der Messung der Verstärkunsfaktor (Gain) mehrfach geändert wurde, werden die gemessenen Werte $U_{out}^*$ wie folgt skaliert:
-\begin{equation}
-U_{Out} = \frac{U_{out}^*}{Gain}.
-\end{equation} 
+Im letzten Veruschsteil wurde die ausgangsspannung in Abhängigkeit von dem Abstand zwischen der LED und der Photodiode bestimmt werden. Die gemessenen Werte sind  in Tabelle 3 zu finden. Da während der Messung der Verstärkunsfaktor (Gain) mehrfach geändert wurde, werden die gemessenen Werte $U_{out}^*$ wie im voherigen Abschnitt skaliert (siehe Formel 3)
 Des Weiteren wurde bei der Abstandsmessung nicht der Abstand $d$ zwischen LED und Detektor gemessen, $d^*$ entspricht dem Abstand zwischen den Gehäusen der Bauteile. Die Differenz dieser Größen wurde ermittelt und beträgt $2.4 \,cm$, daher gilt 
 \begin{equation}
 d = d^* - 0.024\,m .
@@ -270,10 +278,24 @@ $d^* [m]$ & $d [m]$ & $U_{out}^*$ & Gain & $U_{out}$ \\
 
 \begin{figure}[h]
 \centering
+\includegraphics[scale=0.50]{Diagramme/diag1.png}
+\caption{$U_{out}$ in Abhängikeit $\Delta \phi$ (unverrauschtes Signal)}
+\label{sinediag}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.50]{Diagramme/diag2.png}
+\caption{$U_{out}$ in Abhängikeit $\Delta \phi$ (unverrauschtes Signal)}
+\label{noisediag}
+\end{figure}
+\begin{figure}[h]
+\centering
 \includegraphics[scale=0.50]{Diagramme/diag3.png}
 \caption{$U_{out}$ in Abhängikeit von $d$}
 \label{logplot}
 \end{figure}
+
 
 
 \end{document}
