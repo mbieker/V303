@@ -67,6 +67,190 @@ Der Bandpass-Filter wird auf die Frequenz des Funktionengenerators eingestellt. 
 Hier kommt die Diskussion hin.
 \section{Literatur- und Abbildungsverzeichnis}
 Hier befindet sich das Literatur- und Abbildungsverzeichnis.
+
+
 \section{Anhang}
-Hier stehen die im Anhang angefügten Dokumente.
+\begin{itemize}
+\item Tabelle 1: $U_{out}$ in Abhängigkeit von $\Delta\phi$ (unverrauschtes Signal)
+\item Tabelle 2: $U_{out}$ in Abhängigkeit von $\Delta\phi$ (verrauschtes Signal)
+\item Tabelle 3: Messergebnisse der Photodetektorschaltung
+\item Abbildungen \ref{Abb1} bis \ref{Abb14}: Mit dem Oszilloskop erstellte Screenshots
+ 
+\end{itemize}
+\newpage
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+$\Delta \phi [^\circ]$ & $U_{out}^* [V]$ & Gain & $U_{out} [V]$ \\
+\hline
+0.0 & -5.3 & 2 & -2.65\\
+30.0 & -4.8 & 2 &-2.4\\
+60.0 & -1.9 & 2 &-0.95\\
+90.0 & 0.0 & 2 &0.0\\
+120.0 & 2.3 & 2 &1.15\\
+150.0 & 4.9 & 2 &2.45\\
+180.0 & 5.4 & 2 &2.7\\
+210.0 & 4.9 & 2 &2.45\\
+240.0 & 2.0 & 2 &1.0\\
+270.0 & 0.1 & 2 &0.05\\
+300.0 & -2.0 & 2 &-1.0\\
+330.0 & -4.8 & 2 &-2.4\\
+\hline
+\end{tabular}
+\label{data1}
+\caption{Ausgangsspannung bei verschiedenen Phasenverschiebungen \newline (unverrauschtes Signal)}
+\end{table}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+$\Delta \phi [^\circ]$ & $U_{out}^* [V]$ & Gain & $U_{out} [V]$ \\
+\hline
+0.0 & 5.0 & 10.0 & 0.5\\
+30.0 & 4.5 & 10.0 & 0.45\\
+60.0 & 2.1 & 10.0 & 0.21\\
+90.0 & 0.5 & 10.0 & 0.05\\
+120.0 & -1.7 & 10.0 & -0.17\\
+150.0 & -3.8 & 10.0 & -0.38\\
+180.0 & -4.2 & 10.0 & -0.42\\
+210.0 & -3.8 & 10.0 & -0.38\\
+240.0 & -1.4 & 10.0 & -0.14\\
+270.0 & 0.4 & 10.0 & 0.04\\
+300.0 & 2.3 & 10.0 & 0.23\\
+330.0 & 4.6 & 10.0 & 0.46\\
+360.0 & 5.0 & 10.0 & 0.5\\
+\hline
+\end{tabular}
+\label{data2}
+\caption{Ausgangsspannung bei verschiedenen Phasenverschiebungen \newline (verrauschtes Signal)}
+\end{table}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$d^* [m]$ & $d [m]$ & $U_{out}^*$ & Gain & $U_{out}$ \\
+\hline
+0.06 & 0.024 & 6.6 & 2.0 & 3.3\\
+0.16 & 0.124 & 4.7 & 20.0 & 0.235\\
+0.26 & 0.224 & 8.3 & 100.0 & 0.083\\
+0.36 & 0.324 & 4.5 & 100.0 & 0.045\\
+0.46 & 0.424 & 6.5 & 200.0 & 0.0325\\
+0.56 & 0.524 & 5.1 & 200.0 & 0.0255\\
+0.66 & 0.624 & 4.0 & 200.0 & 0.020\\
+0.76 & 0.724 & 8.6 & 500.0 & 0.0172\\
+0.86 & 0.824 & 7.9 & 500.0 & 0.0158\\
+0.96 & 0.924 & 7.4 & 500.0 & 0.0148\\
+1.06 & 1.024 & 6.9 & 500.0 & 0.0138\\
+1.16 & 1.124 & 6.6 & 500.0 & 0.0132\\
+1.26 & 1.224 & 6.5 & 500.0 & 0.0130\\
+1.36 & 1.324 & 6.1 & 500.0 & 0.0122\\
+\hline
+\end{tabular}
+\label{data}
+\caption{Messergebnisse der Photodetektorschaltung}
+\end{table}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/1-sine.png}
+\caption{Signal vom Sinusgenerator}
+\label{Abb1}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/2-noise.png}
+\caption{Unverstärktes Signal mit Rauschen}
+\label{Abb2}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/3-sine.png}
+\caption{Verstärktes Signal ohne Rauschen}
+\label{Abb3}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/3-noise.png}
+\caption{Verstärktes Signal mit Rauschen}
+\label{Abb4}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/4-sine.png}
+\caption{Output des Bandpassfilters }
+\label{Abb5}
+\end{figure}[h]
+\begin{figure}
+\centering
+\includegraphics[scale=0.85]{Bilder/4-noise.png}
+\caption{Output des Bandpassfilters (verrauscht)}
+\label{Abb6}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/5-sine-0.png}
+\caption{Output des Mischers bei unverrauschtem Signal ($\Delta\phi=0^\circ$)}
+\label{Abb7}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/5-sine-90.png}
+\caption{Output des Mischers bei unverrauschtem Signal ($\Delta\phi=90^\circ$) }
+\label{Abb8}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/5-sine-180.png}
+\caption{Output des Mischers bei unverrauschtem Signal ($\Delta\phi=180^\circ$)}
+\label{Abb9}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/5-sine-270.png}
+\caption{Output des Mischers bei unverrauschtem Signal ($\Delta\phi=270^\circ$)}
+\label{Abb10}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/5-noise-0.png}
+\caption{Output des Mischers bei verrauschtem Signal ($\Delta\phi=0^\circ$)}
+\label{Abb11}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/5-noise-90.png}
+\caption{Output des Mischers bei verrauschtem Signal ($\Delta\phi=90^\circ$)}
+\label{Abb12}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/5-noise-180.png}
+\caption{Output des Mischers bei verrauschtem Signal ($\Delta\phi=180^\circ$) }
+\label{Abb13}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.85]{Bilder/5-noise-270.png}
+\caption{Output des Mischers bei verrauschtem Signal ($\Delta\phi=270^\circ$)}
+\label{Abb14}
+\end{figure}
+
+
+
 \end{document}
