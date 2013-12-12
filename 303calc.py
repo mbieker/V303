@@ -66,19 +66,20 @@ data[1] = data[1]/2
 
 print(make_LaTeX_table(array(table_content), [r'$\Delta \phi [^\cric]$','U_{out}','U_{out}^*']))
 def cos_fit(phi,A):
-    return A*cos(phi)/pi
+    return 2*A*cos(phi)/pi
 params , cov = curve_fit(cos_fit,data[0],data[1])
+phi = linspace(0,2*pi)
 plot(data[0],data[1],'x', label = "Messwerte")
 plot(phi, cos_fit(phi, params[0]), label ="Fit")
 xlabel("Phasenverschiebung [rad]")
 ylabel(r"$U_{out} [V]$")
 grid(True)
-phi = linspace(0,2*pi)
+
 
 legend()
 
 
-
+print("U_0 = %s V" , params[0] )
 
 savefig('Diagramme/diag1.png')
 close()
@@ -97,7 +98,7 @@ plot(phase_shift,output, 'x',label="Messwerte")
 xlabel("Phasenverschiebung [rad]")
 ylabel(r"$U_{out} [V]$")
 grid(True)
-
+print("U_0 = %s V" , params[0] )
 legend()
 savefig('Diagramme/diag2.png')
 
