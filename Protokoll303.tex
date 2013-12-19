@@ -64,7 +64,7 @@ Das Lichtsignal der Led wird dann mit einem in variabler Entfernung angebrachten
 \subsubsection{Funktionengenerator}
 Der Funktionengenerator erzeugt zwei Signale, die an separaten Ausgängen anliegen. Am linken Ausgang liegt das Messsignal an, bei dem es sich um eine Rechteck- oder Sinusspannung handelt. Der rechte Ausgang ist für das Referenzsignal bestimmt. Die Amplitude des rechten Ausgangs liegt konstant bei 2.33 V. Am linken Ausgang liegt eine eingestellte Spannung von $10 \, mV$ bei einer Frequenz von $1000 \, Hz$ an. Das mit dem Oszilloskop gemessene Signal ist in Abbildung \ref{Abb1} zu sehen.
 \subsubsection{Rauschgenerator (Nur 1.B)}
-Der Rauschgenerator wird nur in Schaltung 1.B eingesetzt. Er addiert ein Rauschen auf das Signal. Dies ist in Abbildung \ref{Abb2} zu sehen. 
+Der Rauschgenerator wird nur in Schaltung 1.B eingesetzt. Er addiert ein Rauschen auf das Signal. Dies ist in Abbildung \ref{Abb2} zu sehen. Das Signal ist jetzt stark verrauscht, allerdings bleibt die Schwingung immer noch gut erkennbar.
 \subsubsection{Vorverstärker}
 Der Vorverstärker verstärkt das Signal (Abbildungen \ref{Abb3} und \ref{Abb4}). Bei beiden Signalen ist zu sehen, dass sich lediglich die Amplitude der Signale ändert.
 \subsubsection{Bandpass-Filter}
@@ -86,7 +86,7 @@ Die so bestimmmten Werte f\"ur $U_{out}$ werden gegen die Phasenverschiebung $\D
 
 
 \subsection{Photodetektorschaltung}
-Im letzten Veruschsteil wurde die ausgangsspannung in Abhängigkeit von dem Abstand zwischen der LED und der Photodiode bestimmt werden. Die gemessenen Werte sind  in Tabelle 3 zu finden. Da während der Messung der Verstärkunsfaktor (Gain) mehrfach geändert wurde, werden die gemessenen Werte $U_{out}^*$ wie im voherigen Abschnitt skaliert (siehe Formel 3)
+Im letzten Versuchsteil wurde die Ausgangsspannung in Abhängigkeit von dem Abstand zwischen der LED und der Photodiode bestimmt werden. Die gemessenen Werte sind in Tabelle 3 zu finden. Da während der Messung der Verstärkungsfaktor (Gain) mehrfach geändert wurde, werden die gemessenen Werte $U_{out}^*$ wie im voherigen Abschnitt skaliert (siehe Formel 3)
 Des Weiteren wurde bei der Abstandsmessung nicht der Abstand $d$ zwischen LED und Detektor gemessen, $d^*$ entspricht dem Abstand zwischen den Gehäusen der Bauteile. Die Differenz dieser Größen wurde ermittelt und beträgt $2.4 \,cm$, daher gilt 
 \begin{equation}
 d = d^* - 0.024\,m .
@@ -98,19 +98,18 @@ Das Signal der LED konnte trotz der geringen Ausgangsspannung dennoch auf der ge
 
 
 \section{Diskussion}
-Werden die Messergebnisse qualitativ betrachtet, best\"atigen sie die vorhergesagte Abh\"angigkeit von Ausgangsspannung und Phasenverschiebung. Die berechneten Werte f\"ur $U_0$ unterschieden sich um mehrere Gr\"o\ss enordnungen vom angelegten Eingangssignal. Grund hierf\"ur ist wahrscheinlich der Verst\"arkungsfaktor des Vorverst\"arkers, welcher in den Berechnungen von $U_0$ nicht ber\"ucksichtigt wurde. 
+Werden die Messergebnisse qualitativ betrachtet, best\"atigen sie die vorhergesagte Abh\"angigkeit von Ausgangsspannung und Phasenverschiebung. Die berechneten Werte f\"ur $U_0$ unterschieden sich um mehrere Gr\"o\ss enordnungen vom angelegten Eingangssignal. Grund hierf\"ur ist wahrscheinlich der Verst\"ar-kungsfaktor des Vorverst\"arkers, welcher in den Berechnungen von $U_0$ nicht ber\"ucksichtigt wurde. 
 
 \noindent
-Die Messungen an der Photodetektorschaltung haben gezeigt, dass der Lock-In-Verst\"arker es erm\"oglicht ein sehr stark z.B. durch Umgebungslicht verrauschtes Signal zu verarbeiten. So konnte das Signal der LED \"ber die gesamte Messstrecke nachgewiesen werden. Ein praktisches Anwendungsm\"oglickeit ist zum Beispiel eine Lichschrankenanlage.
+Die Messungen an der Photodetektorschaltung haben gezeigt, dass der Lock-In-Verst\"arker es erm\"oglicht ein sehr stark z.B. durch Umgebungslicht verrauschtes Signal zu verarbeiten. So konnte das Signal der LED \"uber die gesamte Messstrecke nachgewiesen werden. Eine praktische Anwendungs-m\"oglichkeit ist zum Beispiel eine Lichschrankenanlage.
 \section{Literatur- und Abbildungsverzeichnis}
-Hier befindet sich das Literatur- und Abbildungsverzeichnis.
-
-
+\begin{itemize}
+\item Abbildungen \ref{Abbi2} und \ref{Abbi3}: Entnommen der Praktikumsableitung zu V303 der TU Dortmund, aufgerufen am 10.12.2013 unter \newline "http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/LockIn.pdf"
+\end{itemize}
 \section{Anhang}
 \begin{itemize}
 \item Tabelle 1: $U_{out}$ in Abhängigkeit von $\Delta\phi$ (unverrauschtes Signal)
 \item Tabelle 2: $U_{out}$ in Abhängigkeit von $\Delta\phi$ (verrauschtes Signal)
-\item Abbildungen \ref{Abbi2} und \ref{Abbi3}: Entnommen der Praktikumsableitung zu V303 der TU Dortmund, aufgerufen am 10.12.2013 unter \newline "http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/LockIn.pdf"
 \item Tabelle 3: Messergebnisse der Photodetektorschaltung
 \item Abbildungen \ref{Abb1} bis \ref{Abb14}: Mit dem Oszilloskop erstellte Screenshots
 \item Abbildung 15: Eigene Erstellung mit python matplotlib
